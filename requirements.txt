@@ -1,0 +1,7 @@
+vllm
+bitsandbytes
+peft
+transformers
+sentence-transformers
+google-genai
+python-dotenv
