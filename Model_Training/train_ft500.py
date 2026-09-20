@@ -9,24 +9,13 @@ from transformers import (
 )
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from datasets import load_dataset
+from data_formatting import format_instruction
+from input_tokenizer import tokenize_function
 
 MODEL_ID = "mistralai/Mistral-7B-v0.1"
 TRAIN_PATH = "./Data/train_dataset_full.jsonl"
 EVAL_PATH = "./Data/eval_dataset_full.jsonl"
 OUTPUT_DIR = "./Checkpoints/rca_mistral_adapter_ft500"
-
-
-def format_instruction(example):
-    messages = example["messages"]
-    system_content = messages[0]["content"]
-    user_content = messages[1]["content"]
-    assistant_content = messages[2]["content"]
-    text = f"<s>[INST] {system_content}\n\n{user_content} [/INST] {assistant_content}</s>"
-    return {"text": text}
-
-
-def tokenize_function(batch, tokenizer):
-    return tokenizer(batch["text"], truncation=True, max_length=1024)
 
 
 def main():
