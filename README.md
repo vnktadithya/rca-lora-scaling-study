@@ -251,7 +251,7 @@ python Model_Evaluation/performance_comparision.py # produces plots/tier_compari
 
 ## License & Data Provenance
 
-Code: MIT (see `LICENSE`). Training/eval data is synthetically generated
+Code: MIT (see [LICENSE](https://github.com/vnktadithya/rca-lora-scaling-study/blob/main/LICENSE)). Training/eval data is synthetically generated
 from public GitHub issue and PR threads via the Gemini API — no private
 repositories or proprietary code were accessed.
 
