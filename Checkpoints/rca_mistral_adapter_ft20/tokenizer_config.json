@@ -7,7 +7,7 @@
   "extra_special_tokens": [],
   "is_local": false,
   "legacy": false,
-  "local_files_only": false,
+  "local_files_only": true,
   "model_max_length": 1000000000000000019884624838656,
   "pad_token": "</s>",
   "sp_model_kwargs": {},
